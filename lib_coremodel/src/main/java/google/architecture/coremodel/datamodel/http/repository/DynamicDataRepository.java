@@ -18,7 +18,7 @@ public class DynamicDataRepository {
 
         return
                 ApiClient
-                .getDynamicDataService()
+                .getDynamicDataService(pullUrl)
                 .getDynamicData(pullUrl)
                 .compose(SwitchSchedulers.applySchedulers())
                 .map(new Function<ResponseBody, T>() {

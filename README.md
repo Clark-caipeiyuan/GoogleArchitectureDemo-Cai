@@ -1,3 +1,15 @@
+# the problems  leaved 
+1、the framework should  be maked to androidX
+2、the Apiclient with dynamicUrl is not right
+3、the demo host can not be conneted
+4、update the gradle version 
+5、update the kotlin version
+
+
+# change record
+2022/2/26 make the demo can run
+
+
 # GoogleArchitectureDemo
 谷歌最新MVVM架构，基于dataBinding、lifecycle、retrofit2、rxjava2、okhttp、fresco。
 
