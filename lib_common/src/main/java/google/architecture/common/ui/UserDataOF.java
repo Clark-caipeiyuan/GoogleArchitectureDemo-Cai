@@ -1,6 +1,7 @@
 package google.architecture.common.ui;
 
-import android.databinding.ObservableField;
+
+import androidx.databinding.ObservableField;
 
 /**
  * Created by danxx on 2017/12/3.

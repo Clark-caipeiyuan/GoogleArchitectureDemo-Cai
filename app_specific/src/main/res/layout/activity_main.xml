@@ -9,11 +9,11 @@
 
         <variable
             name="onNavigationItemSelectedListener"
-            type="android.support.design.widget.BottomNavigationView.OnNavigationItemSelectedListener"></variable>
+            type="com.google.android.material.bottomnavigation.BottomNavigationView.OnNavigationItemSelectedListener"></variable>
 
         <variable
             name="viewPaAdapter"
-            type="android.support.v4.app.FragmentStatePagerAdapter"></variable>
+            type="androidx.fragment.app.FragmentStatePagerAdapter"></variable>
 
     </data>
 
@@ -29,7 +29,7 @@
             android:layout_weight="1"
             bind:viewPagerAdapter="@{viewPaAdapter}"/>
 
-        <android.support.design.widget.BottomNavigationView
+        <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/navigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

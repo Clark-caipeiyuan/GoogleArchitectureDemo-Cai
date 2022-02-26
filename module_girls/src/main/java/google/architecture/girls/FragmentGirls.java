@@ -1,15 +1,15 @@
 package google.architecture.girls;
 
-import android.arch.lifecycle.Observer;
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.Observer;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
@@ -18,7 +18,7 @@ import google.architecture.common.base.ARouterPath;
 import google.architecture.common.base.BaseFragment;
 import google.architecture.coremodel.datamodel.http.entities.GirlsData;
 import google.architecture.coremodel.viewmodel.GirlsViewModel;
-import android.arch.lifecycle.ViewModelProviders;
+import google.architecture.coremodel.viewmodel.ViewModelProviders;
 import google.architecture.girls.databinding.FragmentGirlsBinding;
 
 
@@ -76,7 +76,7 @@ public class FragmentGirls extends BaseFragment {
      */
     private void subscribeToModel(final GirlsViewModel model){
         //观察数据变化来刷新UI
-        model.getLiveObservableData().observe(FragmentGirls.this, new Observer<GirlsData>() {
+        model.getLiveObservableData().observe(getViewLifecycleOwner(), new Observer<GirlsData>() {
             @Override
             public void onChanged(@Nullable GirlsData girlsData) {
                 Log.i("danxx", "subscribeToModel onChanged onChanged");

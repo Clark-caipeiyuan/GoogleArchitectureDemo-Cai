@@ -1,11 +1,12 @@
 package google.architecture.news;
 
-import android.arch.lifecycle.Observer;
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.util.Log;
 import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.Observer;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 
@@ -14,7 +15,7 @@ import google.architecture.common.base.BaseActivity;
 import google.architecture.coremodel.datamodel.http.entities.NewsData;
 import google.architecture.coremodel.util.JsonUtil;
 import google.architecture.coremodel.viewmodel.NewsViewModel;
-import android.arch.lifecycle.ViewModelProviders;
+import google.architecture.coremodel.viewmodel.ViewModelProviders;
 import google.architecture.news.databinding.ActivityNewsBinding;
 
 @Route(path = ARouterPath.NewsListAty)

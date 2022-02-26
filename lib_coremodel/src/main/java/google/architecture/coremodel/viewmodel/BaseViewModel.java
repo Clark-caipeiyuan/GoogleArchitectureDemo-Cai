@@ -1,11 +1,13 @@
 package google.architecture.coremodel.viewmodel;
 
 import android.app.Application;
-import android.arch.lifecycle.AndroidViewModel;
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MutableLiveData;
-import android.databinding.ObservableField;
-import android.support.annotation.NonNull;
+
+
+import androidx.annotation.NonNull;
+import androidx.databinding.ObservableField;
+import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 
 import com.apkfuns.logutils.LogUtils;
 
@@ -32,7 +34,7 @@ import okhttp3.ResponseBody;
 public class BaseViewModel<T> extends AndroidViewModel {
 
     //生命周期观察的数据
-    private MutableLiveData<T>  liveObservableData = new MutableLiveData<>();
+    private MutableLiveData<T> liveObservableData = new MutableLiveData<>();
     //UI使用可观察的数据 ObservableField是一个包装类
     public ObservableField<T> uiObservableData = new ObservableField<>();
 

@@ -1,9 +1,10 @@
 package google.architecture.universal;
 
 import android.content.Intent;
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.util.Log;
+
+import androidx.databinding.DataBindingUtil;
 
 import com.alibaba.android.arouter.facade.Postcard;
 import com.alibaba.android.arouter.facade.annotation.Autowired;

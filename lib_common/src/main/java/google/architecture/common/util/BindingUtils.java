@@ -1,12 +1,15 @@
 package google.architecture.common.util;
 
-import android.databinding.BindingAdapter;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.view.ViewPager;
+
 
 import android.view.View;
+
+import androidx.databinding.BindingAdapter;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
 import com.facebook.drawee.view.SimpleDraweeView;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 /**
  * Created by dxx on 2017/11/13.

@@ -6,12 +6,13 @@ import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
-import android.support.annotation.NonNull;
-import android.support.annotation.StringRes;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.View;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.StringRes;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 /**
  * <p>Utils初始化相关 </p>

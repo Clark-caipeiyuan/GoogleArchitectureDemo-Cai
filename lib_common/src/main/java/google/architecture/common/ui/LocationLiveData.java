@@ -1,14 +1,15 @@
 package google.architecture.common.ui;
 
 import android.Manifest;
-import android.arch.lifecycle.LiveData;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.support.annotation.MainThread;
-import android.support.v4.app.ActivityCompat;
+
+import androidx.annotation.MainThread;
+import androidx.core.app.ActivityCompat;
+import androidx.lifecycle.LiveData;
 
 import com.apkfuns.logutils.LogUtils;
 

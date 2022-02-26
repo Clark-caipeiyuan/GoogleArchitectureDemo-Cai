@@ -8,8 +8,9 @@
 package google.architecture.common.base;
 
 import android.os.Bundle;
-import android.support.annotation.StringRes;
-import android.support.v7.app.ActionBar;
+
+import androidx.annotation.StringRes;
+import androidx.appcompat.app.ActionBar;
 
 import google.architecture.common.R;
 

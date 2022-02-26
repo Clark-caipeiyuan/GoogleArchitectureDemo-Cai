@@ -1,13 +1,15 @@
 package google.architecture.coremodel.viewmodel;
 
 import android.app.Application;
-import android.arch.lifecycle.AndroidViewModel;
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MutableLiveData;
-import android.arch.lifecycle.Transformations;
-import android.databinding.ObservableField;
-import android.support.annotation.NonNull;
+
 import android.util.Log;
+
+import androidx.annotation.NonNull;
+import androidx.databinding.ObservableField;
+import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Transformations;
 
 import com.apkfuns.logutils.LogUtils;
 
@@ -45,7 +47,7 @@ public class NewsViewModel extends AndroidViewModel {
         super(application);
         Log.i("danxx", "GirlsViewModel------>");
         //这里的trigger为网络检测，也可以换成缓存数据是否存在检测
-        mLiveObservableData = Transformations.switchMap(NetUtils.netConnected(application), new android.arch.core.util.Function<Boolean, LiveData<NewsData>>() {
+        mLiveObservableData = Transformations.switchMap(NetUtils.netConnected(application), new androidx.arch.core.util.Function<Boolean, LiveData<NewsData>>() {
             @Override
             public LiveData<NewsData> apply(Boolean isNetConnected) {
 

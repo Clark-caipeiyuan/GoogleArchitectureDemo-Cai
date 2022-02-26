@@ -1,13 +1,13 @@
 package google.architecture.girls;
 
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.Observer;
 
 import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
@@ -20,6 +20,7 @@ import google.architecture.coremodel.datamodel.http.entities.GirlsData;
 import google.architecture.coremodel.viewmodel.BaseViewModel;
 import google.architecture.coremodel.viewmodel.DynamicGirlsViewModel;
 import google.architecture.coremodel.viewmodel.GirlsViewModel;
+import google.architecture.coremodel.viewmodel.ViewModelProviders;
 import google.architecture.girls.databinding.ActivityGirlsBinding;
 
 /**

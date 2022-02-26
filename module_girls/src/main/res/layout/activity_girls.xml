@@ -13,7 +13,7 @@
             type="google.architecture.coremodel.viewmodel.GirlsViewModel"/>
         <variable
             name="recyclerAdapter"
-            type="android.support.v7.widget.RecyclerView.Adapter"/>
+            type="androidx.recyclerview.widget.RecyclerView.Adapter"/>
     </data>
 
     <LinearLayout
@@ -31,7 +31,7 @@
                 android:layout_height="match_parent"
                 android:id="@+id/girls_list_wrapper">
 
-                <android.support.v7.widget.RecyclerView
+                <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/girls_list"
                     android:contentDescription="girls list"
                     android:layout_width="match_parent"

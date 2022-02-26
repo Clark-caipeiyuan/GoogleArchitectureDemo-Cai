@@ -45,8 +45,17 @@ dependencies {
 
     // Architecture components
     api deps.lifecycle.runtime
-    api deps.lifecycle.extensions
     annotationProcessor deps.lifecycle.compiler
+    api deps.lifecycle.lifecycle_viewmodel
+    api deps.lifecycle.lifecycle_livedata
+    api deps.lifecycle.lifecycle_viewmodel_savedstate
+    api deps.lifecycle.java8
+    api deps.lifecycle.lifecycle_service
+    api deps.lifecycle.lifecycle_process
+    api deps.lifecycle.lifecycle_reactivestreams
+    api deps.lifecycle.lifecycle_core_testing
+
+
     api deps.room.runtime
     annotationProcessor deps.room.compiler
 

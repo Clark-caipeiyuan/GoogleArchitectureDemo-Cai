@@ -1,7 +1,7 @@
 package google.architecture.coremodel.viewmodel;
 
 import android.app.Application;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import google.architecture.coremodel.datamodel.http.entities.GirlsData;
 

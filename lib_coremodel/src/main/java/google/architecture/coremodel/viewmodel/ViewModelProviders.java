@@ -2,12 +2,14 @@ package google.architecture.coremodel.viewmodel;
 
 import android.app.Activity;
 import android.app.Application;
-import android.arch.lifecycle.ViewModelProvider;
-import android.arch.lifecycle.ViewModelStores;
-import android.support.annotation.MainThread;
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
+
+import androidx.annotation.MainThread;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelStore;
+import androidx.lifecycle.ViewModelStoreOwner;
 
 /**
  * Created by danxx on 2018/3/31.
@@ -64,7 +66,7 @@ public class ViewModelProviders {
          *   利用HolderFragment来关联生命周期并使用HolderFragment中的ViewModelStore的HashMap存储ViewModel
          *   AndroidViewModelFactory创建ViewModel
          */
-        return new ViewModelProvider(ViewModelStores.of(fragment), factory);
+        return new ViewModelProvider(fragment.getViewModelStore(), factory);
     }
 
     /**
@@ -83,7 +85,7 @@ public class ViewModelProviders {
          *   利用HolderFragment来关联生命周期并使用HolderFragment中的ViewModelStore的HashMap存储ViewModel
          *   AndroidViewModelFactory创建ViewModel
          */
-        return new ViewModelProvider(ViewModelStores.of(activity), factory);
+        return new ViewModelProvider(activity.getViewModelStore(), factory);
     }
 
     /**
@@ -97,7 +99,7 @@ public class ViewModelProviders {
     public static ViewModelProvider of(@NonNull Fragment fragment, @NonNull ViewModelProvider.Factory factory) {
         //检测Fragment
         checkApplication(checkActivity(fragment));
-        return new ViewModelProvider(ViewModelStores.of(fragment), factory);
+        return new ViewModelProvider(fragment.getViewModelStore(), factory);
     }
 
     /**
@@ -112,6 +114,6 @@ public class ViewModelProviders {
                                        @NonNull ViewModelProvider.Factory factory) {
         //检测activity
         checkApplication(activity);
-        return new ViewModelProvider(ViewModelStores.of(activity), factory);
+        return new ViewModelProvider(activity.getViewModelStore(), factory);
     }
 }

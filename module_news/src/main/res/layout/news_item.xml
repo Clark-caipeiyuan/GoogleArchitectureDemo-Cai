@@ -9,7 +9,7 @@
         <variable name="callback"
                   type="google.architecture.news.NewsItemClickCallback"/>
     </data>
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/size_6dp"
@@ -48,5 +48,5 @@
                 android:singleLine="true"
                 android:padding="@dimen/size_4dp"
                 android:text="@{newsItem.gaPrefix}"/>
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 </layout>

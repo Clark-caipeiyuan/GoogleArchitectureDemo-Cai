@@ -1,17 +1,16 @@
 package google.architecture.common.ui;
 
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.Observer;
-import android.database.DatabaseUtils;
-import android.databinding.DataBindingUtil;
-import android.databinding.Observable;
-import android.databinding.ObservableField;
+
 import android.location.Location;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.Observer;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.apkfuns.logutils.LogUtils;
@@ -81,7 +80,7 @@ public class FragmentAbout extends BaseFragment {
 
         LiveData<Location> myLocationListener = LocationLiveData.get(getContext());
 
-        myLocationListener.observe(FragmentAbout.this, new Observer<Location>() {
+        myLocationListener.observe(getViewLifecycleOwner(), new Observer<Location>() {
             @Override
             public void onChanged(@Nullable Location location) {
 
