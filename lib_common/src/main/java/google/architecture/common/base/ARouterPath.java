@@ -20,6 +20,9 @@ public class ARouterPath {
     /**新闻列表Activity*/
     public static final String NewsListAty = "/news/aty/list";
 
+    /**new 新闻列表Activity*/
+    public static final String NewsListActivity = "/news/activity/list";
+
     /**妹子列表Fragment*/
     public static final String GirlsListFgt = "/girls/aty/fgt/list";
 

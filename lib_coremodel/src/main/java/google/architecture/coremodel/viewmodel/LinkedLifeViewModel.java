@@ -13,6 +13,7 @@ import android.util.Log;
 import com.apkfuns.logutils.LogUtils;
 
 import google.architecture.coremodel.datamodel.http.entities.GirlsData;
+import google.architecture.coremodel.datamodel.http.repository.DynamicDataRepository;
 import google.architecture.coremodel.datamodel.http.repository.GankDataRepository;
 import google.architecture.coremodel.util.NetUtils;
 import io.reactivex.Observer;
@@ -26,7 +27,7 @@ import io.reactivex.schedulers.Schedulers;
  * Created by dxx on 2017/11/10.
  */
 
-public class GirlsViewModel extends AndroidViewModel {
+public class LinkedLifeViewModel extends AndroidViewModel {
 
     private static final MutableLiveData ABSENT = new MutableLiveData();
     {
@@ -41,20 +42,20 @@ public class GirlsViewModel extends AndroidViewModel {
 
     private final CompositeDisposable mDisposable = new CompositeDisposable();
 
-    public GirlsViewModel(@NonNull Application application) {
+    public LinkedLifeViewModel(@NonNull Application application) {
         super(application);
-        Log.i("danxx", "GirlsViewModel------>");
+        Log.i("danxx", "LinkedLifeViewModel------>");
         //这里的trigger为网络检测，也可以换成缓存数据是否存在检测
         mLiveObservableData = Transformations.switchMap(NetUtils.netConnected(application), new Function<Boolean, LiveData<GirlsData>>() {
             @Override
             public LiveData<GirlsData> apply(Boolean isNetConnected) {
-                Log.i("danxx", "apply------>"+isNetConnected);
+                Log.i("danxx", "LinkedLifeViewModel apply------>"+isNetConnected);
                 if (!isNetConnected) {
                     return ABSENT; //网络未连接返回空
                 }
                 MutableLiveData<GirlsData> applyData = new MutableLiveData<>();
 
-                GankDataRepository.getFuliDataRepository("20", "1")
+                DynamicDataRepository.getDynamicData("mobile/system/baseConfig", GirlsData.class)
                 .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribe(new Observer<GirlsData>() {
@@ -65,19 +66,19 @@ public class GirlsViewModel extends AndroidViewModel {
 
                             @Override
                             public void onNext(GirlsData value) {
-                                Log.i("danxx", "setValue------>");
+                                Log.i("danxx", "LinkedLifeViewModel setValue------>");
                                 applyData.setValue(value);
                             }
 
                             @Override
                             public void onError(Throwable e) {
-                                Log.i("danxx", "onError------>");
+                                Log.i("danxx", "LinkedLifeViewModel onError------>");
                                 e.printStackTrace();
                             }
 
                             @Override
                             public void onComplete() {
-                                Log.i("danxx", "onComplete------>");
+                                Log.i("LinkedLifeViewModel danxx", "onComplete------>");
                             }
                         });
                 return applyData;

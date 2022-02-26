@@ -33,9 +33,9 @@ public class ApiClient {
      *
      * @return
      */
-    public static DynamicApiService getDynamicDataService(String baseUrl) {
+    public static DynamicApiService getDynamicDataService() {
 
-        DynamicApiService dynamicApiService = ApiClient.initService(baseUrl, DynamicApiService.class);
+        DynamicApiService dynamicApiService = ApiClient.initService("", DynamicApiService.class);
 
         return dynamicApiService;
     }
@@ -62,7 +62,7 @@ public class ApiClient {
             synchronized (ApiClient.class) {
                 if (retrofitInstance == null) {
                     retrofitInstance = new Retrofit.Builder()
-                            .baseUrl(baseUrl)
+                            .baseUrl(ApiConstants.GankHost)
                             .addConverterFactory(GsonConverterFactory.create())
                             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                             .client(getOkHttpClientInstance())

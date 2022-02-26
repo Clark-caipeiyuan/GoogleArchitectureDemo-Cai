@@ -49,17 +49,17 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.GirlsViewHolde
                 public boolean areItemsTheSame(int oldItemPosition, int newItemPosition) {
                     NewsData.ResultsBean oldData = newsList.get(oldItemPosition);
                     NewsData.ResultsBean newData = list.get(newItemPosition);
-                    return oldData.get_id() == newData.get_id();
+                    return oldData.getId() == newData.getId();
                 }
 
                 @Override
                 public boolean areContentsTheSame(int oldItemPosition, int newItemPosition) {
                     NewsData.ResultsBean oldData = newsList.get(oldItemPosition);
                     NewsData.ResultsBean newData = list.get(newItemPosition);
-                    return oldData.get_id() == newData.get_id()
-                            && oldData.getCreatedAt() == newData.getCreatedAt()
-                            && oldData.getPublishedAt() == newData.getPublishedAt()
-                            && oldData.getSource() == newData.getSource();
+                    return oldData.getId() == newData.getId()
+                            && oldData.getHint() == newData.getHint()
+                            && oldData.getTitle() == newData.getTitle()
+                            && oldData.getImage_hue() == newData.getImage_hue();
                 }
             });
             newsList = list;

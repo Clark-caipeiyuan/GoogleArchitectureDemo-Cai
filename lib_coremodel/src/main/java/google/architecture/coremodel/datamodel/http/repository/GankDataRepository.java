@@ -28,5 +28,22 @@ public class GankDataRepository {
 
         return observableForGetAndroidDataFromNetWork;
     }
+    public static Observable<NewsData> getNewsListDataRepository(String size, String index,String date){
+
+        Observable<NewsData> observableForGetAndroidDataFromNetWork = ApiClient.getGankDataService().getNewsList(date);
+
+        //可以操作Observable来筛选网络或者是本地数据
+
+        return observableForGetAndroidDataFromNetWork;
+    }
+
+    public static Observable<NewsData> getNewsDetailRepository(String id){
+
+        Observable<NewsData> observableForGetAndroidDataFromNetWork = ApiClient.getGankDataService().getNewsDetail(id);
+
+        //可以操作Observable来筛选网络或者是本地数据
+
+        return observableForGetAndroidDataFromNetWork;
+    }
 
 }

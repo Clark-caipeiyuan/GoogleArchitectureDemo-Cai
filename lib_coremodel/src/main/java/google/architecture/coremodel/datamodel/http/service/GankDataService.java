@@ -14,10 +14,16 @@ import retrofit2.http.Url;
 
 public interface GankDataService {
 
-    @GET  ("api/data/福利/{size}/{index}")
+    @GET("api/data/福利/{size}/{index}")
     Observable<GirlsData> getFuliData(@Path("size") String size, @Path("index") String index);
 
     @GET("api/data/Android/{size}/{index}")
     Observable<NewsData> getAndroidData(@Path("size") String size, @Path("index") String index);
 
+
+    @GET("api/4/news/before/{date}")
+    Observable<NewsData> getNewsList(@Path("date") String date);
+
+    @GET("api/4/news/{id}")
+    Observable<NewsData> getNewsDetail(@Path("id") String id);
 }

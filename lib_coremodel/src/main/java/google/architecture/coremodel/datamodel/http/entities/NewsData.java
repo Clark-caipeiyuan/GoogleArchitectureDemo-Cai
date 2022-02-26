@@ -8,116 +8,90 @@ import java.util.List;
 
 public class NewsData {
 
-    private boolean error;
-    private List<ResultsBean> results;
+    private String date;
+    private List<ResultsBean> stories;
 
-    public boolean isError() {
-        return error;
+    public String getDate() {
+        return date;
     }
 
-    public void setError(boolean error) {
-        this.error = error;
+    public void setDate(String date) {
+        this.date = date;
     }
 
-    public List<ResultsBean> getResults() {
-        return results;
+    public List<ResultsBean> getStories() {
+        return stories;
     }
 
-    public void setResults(List<ResultsBean> results) {
-        this.results = results;
+    public void setStories(List<ResultsBean> stories) {
+        this.stories = stories;
     }
 
     public static class ResultsBean {
 
-        private String _id;
-        private String createdAt;
-        private String desc;
-        private String publishedAt;
-        private String source;
-        private String type;
-        private String url;
-        private boolean used;
-        private String who;
-        private List<String> images;
 
-        public String get_id() {
-            return _id;
+        private String id;
+        private String image_hue;
+        private String title;
+        private String hint;
+        private String gaPrefix;
+        private Integer typeX;
+        private Integer idX;
+
+        public String getId() {
+            return id;
         }
 
-        public void set_id(String _id) {
-            this._id = _id;
+        public void setId(String id) {
+            this.id = id;
         }
 
-        public String getCreatedAt() {
-            return createdAt;
+        public String getImage_hue() {
+            return image_hue;
         }
 
-        public void setCreatedAt(String createdAt) {
-            this.createdAt = createdAt;
+        public void setImage_hue(String image_hue) {
+            this.image_hue = image_hue;
         }
 
-        public String getDesc() {
-            return desc;
+        public String getTitle() {
+            return title;
         }
 
-        public void setDesc(String desc) {
-            this.desc = desc;
+        public void setTitle(String title) {
+            this.title = title;
         }
 
-        public String getPublishedAt() {
-            return publishedAt;
+        public String getHint() {
+            return hint;
         }
 
-        public void setPublishedAt(String publishedAt) {
-            this.publishedAt = publishedAt;
+        public void setHint(String hint) {
+            this.hint = hint;
         }
 
-        public String getSource() {
-            return source;
+        public String getGaPrefix() {
+            return gaPrefix;
         }
 
-        public void setSource(String source) {
-            this.source = source;
+        public void setGaPrefix(String gaPrefix) {
+            this.gaPrefix = gaPrefix;
         }
 
-        public String getType() {
-            return type;
+        public Integer getTypeX() {
+            return typeX;
         }
 
-        public void setType(String type) {
-            this.type = type;
+        public void setTypeX(Integer typeX) {
+            this.typeX = typeX;
         }
 
-        public String getUrl() {
-            return url;
+        public Integer getIdX() {
+            return idX;
         }
 
-        public void setUrl(String url) {
-            this.url = url;
-        }
-
-        public boolean isUsed() {
-            return used;
-        }
-
-        public void setUsed(boolean used) {
-            this.used = used;
-        }
-
-        public String getWho() {
-            return who;
-        }
-
-        public void setWho(String who) {
-            this.who = who;
-        }
-
-        public List<String> getImages() {
-            return images;
-        }
-
-        public void setImages(List<String> images) {
-            this.images = images;
+        public void setIdX(Integer idX) {
+            this.idX = idX;
         }
     }
 }

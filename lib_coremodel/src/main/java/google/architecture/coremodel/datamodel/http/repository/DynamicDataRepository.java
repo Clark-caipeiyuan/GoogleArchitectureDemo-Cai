@@ -1,5 +1,7 @@
 package google.architecture.coremodel.datamodel.http.repository;
 
+import android.util.Log;
+
 import google.architecture.coremodel.datamodel.http.ApiClient;
 import google.architecture.coremodel.util.JsonUtil;
 import google.architecture.coremodel.util.SwitchSchedulers;
@@ -18,12 +20,13 @@ public class DynamicDataRepository {
 
         return
                 ApiClient
-                .getDynamicDataService(pullUrl)
+                .getDynamicDataService()
                 .getDynamicData(pullUrl)
                 .compose(SwitchSchedulers.applySchedulers())
                 .map(new Function<ResponseBody, T>() {
                     @Override
                     public T apply(ResponseBody responseBody) throws Exception {
+                        Log.d("danxx",JsonUtil.JsonBean2Str(responseBody));
                         return JsonUtil.Str2JsonBean(responseBody.string(), clazz);
                     }
                 });

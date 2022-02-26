@@ -55,7 +55,7 @@ public class NewsViewModel extends AndroidViewModel {
                 }
                 MutableLiveData<NewsData> applyData = new MutableLiveData<>();
 
-                GankDataRepository.getNewsDataRepository("20", "1")
+                GankDataRepository.getNewsListDataRepository("20", "1","20220224")
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribe(new Observer<NewsData>() {
