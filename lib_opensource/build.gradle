@@ -42,6 +42,7 @@ dependencies {
     api deps.support.design
     api deps.support.cardview
     api deps.support.recyclerview
+//    api deps.support.viewpager2
 
     // Architecture components
     api deps.lifecycle.runtime

@@ -75,6 +75,7 @@
     support.core_splashscreen = "androidx.core:core-splashscreen:$versions.core_beta"
     support.multidex = "androidx.multidex:multidex:$versions.multidex"
     support.multidex_instrumentation = "androidx.multidex:multidex-instrumentation:$versions.multidex_instrumentation"
+    support.viewpager2 = 'androidx.viewpager2:viewpager2:1.0.0-alpha01'
     deps.support = support
 
     def room = [:]
@@ -135,6 +136,7 @@
     retrofit.runtime = "com.squareup.retrofit2:retrofit:$versions.retrofit"
     retrofit.gson = "com.squareup.retrofit2:converter-gson:$versions.retrofit"
     retrofit.adapter_rxjava2 = "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit"
+
     deps.retrofit = retrofit
 
 
