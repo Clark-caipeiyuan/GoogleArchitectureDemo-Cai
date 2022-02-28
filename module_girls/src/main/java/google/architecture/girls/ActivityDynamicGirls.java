@@ -24,7 +24,7 @@ import google.architecture.coremodel.viewmodel.ViewModelProviders;
 import google.architecture.girls.databinding.ActivityGirlsBinding;
 
 /**
- * Created by dxx on 2017/11/20.
+ * Created by Clark on 2022/02/28.
  */
 @Route(path = ARouterPath.DynaGirlsListAty)
 public class ActivityDynamicGirls extends BaseActivity {
@@ -42,7 +42,7 @@ public class ActivityDynamicGirls extends BaseActivity {
         //inject需要注入后才可以读取到携带过来的参数
         ARouter.getInstance().inject(this);
 
-        Log.i("danxx", "fullUrl-->"+fullUrl);
+        Log.i("clark", "fullUrl-->"+fullUrl);
         if(TextUtils.isEmpty(fullUrl)){
             return;
         }
@@ -74,7 +74,7 @@ public class ActivityDynamicGirls extends BaseActivity {
         model.getLiveObservableData().observe(this, new Observer<GirlsData>() {
             @Override
             public void onChanged(@Nullable GirlsData girlsData) {
-                Log.i("danxx", "subscribeToModel onChanged onChanged");
+                Log.i("clark", "subscribeToModel onChanged onChanged");
                 model.setUiObservableData(girlsData);
                 girlsAdapter.setGirlsList(girlsData.getResults());
             }

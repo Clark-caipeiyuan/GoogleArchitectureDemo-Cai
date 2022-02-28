@@ -14,7 +14,7 @@ import google.architecture.coremodel.datamodel.http.entities.NewsData;
 import google.architecture.news.databinding.NewsItemBinding;
 
 /**
- * Created by dxx on 2017/11/10.
+ * Created by Clark on 2022/02/28.
  */
 
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.GirlsViewHolder> {

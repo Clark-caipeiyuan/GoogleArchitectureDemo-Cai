@@ -14,7 +14,7 @@ import androidx.lifecycle.LiveData;
 import com.apkfuns.logutils.LogUtils;
 
 /**
- * Created by danxx on 2018/4/1.
+ * Created by clark on 2022/02/28.
  * 利用LiveData单例来实时更新状态和监听
  * 定位介绍文章：https://blog.csdn.net/leibing891213/article/details/51423042
  */

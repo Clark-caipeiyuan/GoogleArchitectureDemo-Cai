@@ -5,7 +5,7 @@ import com.facebook.drawee.backends.pipeline.Fresco;
 import google.architecture.common.base.BaseApplication;
 
 /**
- * Created by dxx on 2017/11/16.
+ * Created by Clark on 2022/02/28.
  */
 
 public class NewsApplication extends BaseApplication {

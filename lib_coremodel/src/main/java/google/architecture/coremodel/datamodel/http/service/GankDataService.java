@@ -9,7 +9,7 @@ import retrofit2.http.Path;
 import retrofit2.http.Url;
 
 /**
- * Created by dxx on 2017/11/8.
+ * Created by Clark on 2022/02/28.
  */
 
 public interface GankDataService {

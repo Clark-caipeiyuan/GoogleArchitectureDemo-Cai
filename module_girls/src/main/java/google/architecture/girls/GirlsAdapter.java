@@ -14,7 +14,7 @@ import google.architecture.coremodel.datamodel.http.entities.GirlsData;
 import google.architecture.girls.databinding.GirlItemBinding;
 
 /**
- * Created by dxx on 2017/11/10.
+ * Created by Clark on 2022/02/28.
  */
 
 public class GirlsAdapter extends RecyclerView.Adapter<GirlsAdapter.GirlsViewHolder> {

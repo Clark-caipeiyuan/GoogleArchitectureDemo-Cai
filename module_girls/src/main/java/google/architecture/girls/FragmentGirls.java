@@ -23,7 +23,7 @@ import google.architecture.girls.databinding.FragmentGirlsBinding;
 
 
 /**
- * @Desc FragmentGirls
+ * @Desc Created by Clark on 2022/02/28.
  */
 @Route(path = ARouterPath.GirlsListFgt)
 public class FragmentGirls extends BaseFragment {
@@ -79,7 +79,7 @@ public class FragmentGirls extends BaseFragment {
         model.getLiveObservableData().observe(getViewLifecycleOwner(), new Observer<GirlsData>() {
             @Override
             public void onChanged(@Nullable GirlsData girlsData) {
-                Log.i("danxx", "subscribeToModel onChanged onChanged");
+                Log.i("clark", "subscribeToModel onChanged onChanged");
                 model.setUiObservableData(girlsData);
                 girlsAdapter.setGirlsList(girlsData.getResults());
             }

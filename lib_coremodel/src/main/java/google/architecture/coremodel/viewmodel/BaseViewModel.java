@@ -28,7 +28,7 @@ import io.reactivex.schedulers.Schedulers;
 import okhttp3.ResponseBody;
 
 /**
- * Created by dxx on 2017/11/20.
+ * Created by Clark on 2022/02/28.
  */
 
 public class BaseViewModel<T> extends AndroidViewModel {

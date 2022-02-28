@@ -9,6 +9,7 @@ import java.util.List;
 import google.architecture.common.util.Utils;
 
 /**
+ * Author clark 2022/2/28
  * 要想使用BaseApplication，必须在组件中实现自己的Application，并且继承BaseApplication；
  * 组件中实现的Application必须在debug包中的AndroidManifest.xml中注册，否则无法使用；
  * 组件的Application需置于java/debug文件夹中，不得放于主代码；
@@ -41,7 +42,7 @@ public class BaseApplication extends Application {
 
         LogUtils.getLogConfig()
                 .configAllowLog(true)
-                .configTagPrefix("danxx")
+                .configTagPrefix("clark")
                 .configShowBorders(true)
                 .configFormatTag("%d{HH:mm:ss:SSS} %t %c{-5}");
 

@@ -10,7 +10,7 @@ import io.reactivex.functions.Function;
 import okhttp3.ResponseBody;
 
 /**
- * Created by dxx on 2017/11/20.
+ * Created by clark on 2022/02/28.
  * 动态url数据获取
  */
 
@@ -26,7 +26,7 @@ public class DynamicDataRepository {
                 .map(new Function<ResponseBody, T>() {
                     @Override
                     public T apply(ResponseBody responseBody) throws Exception {
-                        Log.d("danxx",JsonUtil.JsonBean2Str(responseBody));
+                        Log.d("clark",JsonUtil.JsonBean2Str(responseBody));
                         return JsonUtil.Str2JsonBean(responseBody.string(), clazz);
                     }
                 });

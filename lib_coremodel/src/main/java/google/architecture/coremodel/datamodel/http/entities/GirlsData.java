@@ -3,7 +3,7 @@ package google.architecture.coremodel.datamodel.http.entities;
 import java.util.List;
 
 /**
- * Created by dxx on 2017/11/8.
+ * Created by clark on 2022/02/28.
  */
 
 public class GirlsData {

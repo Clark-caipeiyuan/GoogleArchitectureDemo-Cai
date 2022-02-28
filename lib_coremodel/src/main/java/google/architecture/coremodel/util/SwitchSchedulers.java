@@ -22,7 +22,7 @@ import io.reactivex.schedulers.Schedulers;
 
 /**
  * Rxjava线程调度工具
- * Created by dxx on 2017/11/21.
+ * Created by Clark on 2022/02/28.
  */
 
 public class SwitchSchedulers {

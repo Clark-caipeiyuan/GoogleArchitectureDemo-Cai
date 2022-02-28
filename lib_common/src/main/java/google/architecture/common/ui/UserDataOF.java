@@ -4,7 +4,7 @@ package google.architecture.common.ui;
 import androidx.databinding.ObservableField;
 
 /**
- * Created by danxx on 2017/12/3.
+ * Created by clark on 2022/02/28.
  * 简写版支持双向绑定的数据
  */
 

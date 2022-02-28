@@ -4,7 +4,7 @@ import android.location.Location;
 import android.location.LocationListener;
 
 /**
- * Created by Administrator on 2018/4/1.
+ * Created by clark on 2022/02/28.
  */
 
 public interface SimpleLocationListener extends LocationListener {

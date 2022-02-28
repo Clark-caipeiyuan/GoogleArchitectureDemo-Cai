@@ -7,6 +7,9 @@ import android.net.NetworkInfo;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
+/**
+ * Created by Clark on 2022/02/28.
+ */
 public class NetUtils {
 
     public static final int DISCONNECTED = 0;

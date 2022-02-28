@@ -55,7 +55,7 @@ public class ActivityNewList extends BaseActivity {
         model.getLiveObservableData().observe(this, new Observer<NewsData>() {
             @Override
             public void onChanged(@Nullable NewsData newsData) {
-                Log.i("danxx", "subscribeToModel onChanged onChanged");
+                Log.i("clark", "subscribeToModel onChanged onChanged");
                 model.setUiObservableData(newsData);
                 newsAdapter.setGirlsList(newsData.getStories());
             }

@@ -10,9 +10,12 @@ import java.util.List;
 import google.architecture.common.base.BaseFragment;
 
 /**
- * <p>Fragments适配器 </p>
- * @name ResourcePagerAdapter
+ * @ClassName: FragmentAdapter
+ * @Description: Fragment 适配器
+ * @Author: clark
+ * @Date: 2022/2/28 5:27 下午
  */
+
 public class FragmentAdapter extends FragmentStatePagerAdapter {
     private List<BaseFragment> mFragments;
 

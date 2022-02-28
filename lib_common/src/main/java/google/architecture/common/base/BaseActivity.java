@@ -12,6 +12,7 @@ import google.architecture.common.R;
 import google.architecture.common.util.Utils;
 
 /**
+ * Author clark 2022/2/28
  * <p>Activity基类 </p>
  * @name BaseActivity
  */

@@ -24,7 +24,7 @@ import io.reactivex.schedulers.Schedulers;
 
 /**
  * 保存生命周期和UI所使用的数据
- * Created by dxx on 2017/11/10.
+ * Created by Clark on 2022/02/28.
  */
 
 public class LinkedLifeViewModel extends AndroidViewModel {
@@ -44,12 +44,12 @@ public class LinkedLifeViewModel extends AndroidViewModel {
 
     public LinkedLifeViewModel(@NonNull Application application) {
         super(application);
-        Log.i("danxx", "LinkedLifeViewModel------>");
+        Log.i("clark", "LinkedLifeViewModel------>");
         //这里的trigger为网络检测，也可以换成缓存数据是否存在检测
         mLiveObservableData = Transformations.switchMap(NetUtils.netConnected(application), new Function<Boolean, LiveData<GirlsData>>() {
             @Override
             public LiveData<GirlsData> apply(Boolean isNetConnected) {
-                Log.i("danxx", "LinkedLifeViewModel apply------>"+isNetConnected);
+                Log.i("clark", "LinkedLifeViewModel apply------>"+isNetConnected);
                 if (!isNetConnected) {
                     return ABSENT; //网络未连接返回空
                 }
@@ -66,19 +66,19 @@ public class LinkedLifeViewModel extends AndroidViewModel {
 
                             @Override
                             public void onNext(GirlsData value) {
-                                Log.i("danxx", "LinkedLifeViewModel setValue------>");
+                                Log.i("clark", "LinkedLifeViewModel setValue------>");
                                 applyData.setValue(value);
                             }
 
                             @Override
                             public void onError(Throwable e) {
-                                Log.i("danxx", "LinkedLifeViewModel onError------>");
+                                Log.i("clark", "LinkedLifeViewModel onError------>");
                                 e.printStackTrace();
                             }
 
                             @Override
                             public void onComplete() {
-                                Log.i("LinkedLifeViewModel danxx", "onComplete------>");
+                                Log.i("LinkedLifeViewModel clark", "onComplete------>");
                             }
                         });
                 return applyData;

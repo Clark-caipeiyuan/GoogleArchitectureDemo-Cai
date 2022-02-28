@@ -9,7 +9,10 @@ import google.architecture.common.base.BaseApplication;
 import google.architecture.common.util.Utils;
 
 /**
- * Created by dxx on 2017/11/13.
+ * @ClassName: Application
+ * @Description: 工程入口
+ * @Author: clark
+ * @Date: 2022/2/28 5:27 下午
  */
 
 public class App  extends BaseApplication{

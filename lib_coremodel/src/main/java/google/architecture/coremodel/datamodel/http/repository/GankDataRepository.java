@@ -6,7 +6,7 @@ import google.architecture.coremodel.datamodel.http.entities.GirlsData;
 import io.reactivex.Observable;
 
 /**
- * Created by dxx on 2017/11/8.
+ * Created by clark on 2022/02/28.
  */
 
 public class GankDataRepository {

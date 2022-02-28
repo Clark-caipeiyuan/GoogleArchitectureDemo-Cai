@@ -1,7 +1,7 @@
 package google.architecture.common.base;
 
 /**
- * Created by danxx on 2017/11/27.
+ * Created by clark 2022/2/28.
  * 路由path
  *
  * Aty : Activity

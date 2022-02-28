@@ -16,7 +16,12 @@ import google.architecture.common.base.BaseActivity;
 import google.architecture.common.service.TestService;
 import google.architecture.coremodel.viewmodel.GirlsViewModel;
 import google.architecture.universal.databinding.ActivityMainBinding;
-
+/**
+ * @ClassName: ActivityMain
+ * @Description: 主页面
+ * @Author: clark
+ * @Date: 2022/2/28 5:27 下午
+ */
 public class ActivityMain extends BaseActivity {
     ActivityMainBinding binding;
 
@@ -41,7 +46,7 @@ public class ActivityMain extends BaseActivity {
         testService3.sayHello("build invoke 233");
 
         setTitle("UniversalApp_ActivityMain");
-        Log.i("danxx", "onCreate onCreate");
+        Log.i("clark", "onCreate onCreate");
         binding = DataBindingUtil.setContentView(ActivityMain.this, R.layout.activity_main);
         binding.setItemClick(itemClick);
 
@@ -52,7 +57,7 @@ public class ActivityMain extends BaseActivity {
         public void onClick(int id) {
             switch (id){
                 case R.id.toGirls:
-                    Log.i("danxx", "onClick toGirls");
+                    Log.i("clark", "onClick toGirls");
                     //跳转到GirlsActivity
                     ARouter.getInstance()
                             .build(ARouterPath.GirlsListAty)
@@ -61,7 +66,7 @@ public class ActivityMain extends BaseActivity {
                             .navigation(ActivityMain.this);
                     break;
                 case R.id.toNews:
-                    Log.i("danxx", "onClick toNews");
+                    Log.i("clark", "onClick toNews");
                     //跳转到NewsActivity
                     ARouter.getInstance()
                             .build(ARouterPath.NewsListAty)
@@ -69,27 +74,27 @@ public class ActivityMain extends BaseActivity {
                             .navigation(ActivityMain.this, 2, new NavigationCallback() {
                                 @Override
                                 public void onFound(Postcard postcard) {
-                                    Log.i("danxx", "ARouter onFound 找到跳转匹配路径");
+                                    Log.i("clark", "ARouter onFound 找到跳转匹配路径");
                                 }
 
                                 @Override
                                 public void onLost(Postcard postcard) {
-                                    Log.i("danxx", "ARouter onLost 没有匹配到跳转路径");
+                                    Log.i("clark", "ARouter onLost 没有匹配到跳转路径");
                                 }
 
                                 @Override
                                 public void onArrival(Postcard postcard) {
-                                    Log.i("danxx", "ARouter onArrival 成功跳转");
+                                    Log.i("clark", "ARouter onArrival 成功跳转");
                                 }
 
                                 @Override
                                 public void onInterrupt(Postcard postcard) {
-                                    Log.i("danxx", "ARouter onInterrupt 跳转被中断");
+                                    Log.i("clark", "ARouter onInterrupt 跳转被中断");
                                 }
                             });
                     break;
                 case R.id.toDynamic:
-                    Log.i("danxx", "onClick toNews");
+                    Log.i("clark", "onClick toNews");
                     //跳转到ActivityDynamicGirls (模拟动态url)
                     ARouter.getInstance()
                             .build(ARouterPath.DynaGirlsListAty)
@@ -127,7 +132,7 @@ public class ActivityMain extends BaseActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        Log.d("danxx", "onActivityResult requestCode: "+requestCode);
+        Log.d("clark", "onActivityResult requestCode: "+requestCode);
 
     }
 }

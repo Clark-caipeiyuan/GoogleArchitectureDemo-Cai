@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 import google.architecture.coremodel.datamodel.http.entities.GirlsData;
 
 /**
- * Created by dxx on 2017/11/20.
+ * Created by Clark on 2022/02/28.
  * 动态的url
  */
 

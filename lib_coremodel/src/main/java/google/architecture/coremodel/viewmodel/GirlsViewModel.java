@@ -24,7 +24,7 @@ import io.reactivex.schedulers.Schedulers;
 
 /**
  * 保存生命周期和UI所使用的数据
- * Created by dxx on 2017/11/10.
+ * Created by Clark on 2022/02/28.
  */
 
 public class GirlsViewModel extends AndroidViewModel {
@@ -44,12 +44,12 @@ public class GirlsViewModel extends AndroidViewModel {
 
     public GirlsViewModel(@NonNull Application application) {
         super(application);
-        Log.i("danxx", "GirlsViewModel------>");
+        Log.i("clark", "GirlsViewModel------>");
         //这里的trigger为网络检测，也可以换成缓存数据是否存在检测
         mLiveObservableData = Transformations.switchMap(NetUtils.netConnected(application), new Function<Boolean, LiveData<GirlsData>>() {
             @Override
             public LiveData<GirlsData> apply(Boolean isNetConnected) {
-                Log.i("danxx", "apply------>"+isNetConnected);
+                Log.i("clark", "apply------>"+isNetConnected);
                 if (!isNetConnected) {
                     return ABSENT; //网络未连接返回空
                 }
@@ -66,19 +66,19 @@ public class GirlsViewModel extends AndroidViewModel {
 
                             @Override
                             public void onNext(GirlsData value) {
-                                Log.i("danxx", "setValue------>");
+                                Log.i("clark", "setValue------>");
                                 applyData.setValue(value);
                             }
 
                             @Override
                             public void onError(Throwable e) {
-                                Log.i("danxx", "onError------>");
+                                Log.i("clark", "onError------>");
                                 e.printStackTrace();
                             }
 
                             @Override
                             public void onComplete() {
-                                Log.i("danxx", "onComplete------>");
+                                Log.i("clark", "onComplete------>");
                             }
                         });
                 return applyData;

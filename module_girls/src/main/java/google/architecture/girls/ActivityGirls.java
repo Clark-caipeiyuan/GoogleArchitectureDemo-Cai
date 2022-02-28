@@ -56,7 +56,7 @@ public class ActivityGirls extends BaseActivity {
         model.getLiveObservableData().observe(this, new Observer<GirlsData>() {
             @Override
             public void onChanged(@Nullable GirlsData girlsData) {
-                Log.i("danxx", "subscribeToModel onChanged onChanged");
+                Log.i("clark", "subscribeToModel onChanged onChanged");
                 model.setUiObservableData(girlsData);
                 girlsAdapter.setGirlsList(girlsData.getResults());
             }

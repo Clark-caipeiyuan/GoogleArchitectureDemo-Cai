@@ -11,7 +11,7 @@ import com.alibaba.android.arouter.facade.template.IInterceptor;
 import google.architecture.common.base.ARouterPath;
 
 /**
- * Created by danxx on 2017/11/27.
+ * Created by clark on 2022/2/28.
  *
  * 比较经典的应用就是在跳转过程中处理登陆事件，这样就不需要在目标页重复做登陆检查
  * 拦截器会在跳转之前执行，多个拦截器会按优先级顺序依次执行
@@ -25,10 +25,10 @@ public class RouterInterceptor implements IInterceptor {
     public void process(Postcard postcard, InterceptorCallback callback) {
 
         if(postcard.getPath().contains(ARouterPath.GirlsListAty)){
-            Log.d("danxx", "拦截到向ActivityGirls跳转");
+            Log.d("clark", "拦截到向ActivityGirls跳转");
             //自定义处理
         }else {
-            Log.d("danxx", "非拦截跳转执行path: "+postcard.getPath());
+            Log.d("clark", "非拦截跳转执行path: "+postcard.getPath());
         }
 
         callback.onContinue(postcard);  // 处理完成，交还控制权
@@ -39,6 +39,6 @@ public class RouterInterceptor implements IInterceptor {
     @Override
     public void init(Context context) {
             // 拦截器的初始化，会在sdk初始化的时候调用该方法，仅会调用一次
-        Log.d("danxx", "RouterInterceptor init");
+        Log.d("clark", "RouterInterceptor init");
     }
 }

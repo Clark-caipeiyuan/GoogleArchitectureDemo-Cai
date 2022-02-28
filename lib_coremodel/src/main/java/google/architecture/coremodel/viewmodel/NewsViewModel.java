@@ -25,7 +25,7 @@ import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
 
 /**
- * Created by dxx on 2017/11/17.
+ * Created by Clark on 2022/02/28.
  */
 
 public class NewsViewModel extends AndroidViewModel {
@@ -45,13 +45,13 @@ public class NewsViewModel extends AndroidViewModel {
 
     public NewsViewModel(@NonNull Application application) {
         super(application);
-        Log.i("danxx", "GirlsViewModel------>");
+        Log.i("clark", "GirlsViewModel------>");
         //这里的trigger为网络检测，也可以换成缓存数据是否存在检测
         mLiveObservableData = Transformations.switchMap(NetUtils.netConnected(application), new androidx.arch.core.util.Function<Boolean, LiveData<NewsData>>() {
             @Override
             public LiveData<NewsData> apply(Boolean isNetConnected) {
 
-                Log.i("danxx", "apply------>");
+                Log.i("clark", "apply------>");
                 if (!isNetConnected) {
                     return ABSENT; //网络未连接返回空
                 }

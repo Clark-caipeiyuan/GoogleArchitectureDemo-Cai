@@ -12,7 +12,7 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 /**
- * Created by dxx on 2017/11/13.
+ * Created by clark on 2022/02/28.
  */
 
 public class BindingUtils {

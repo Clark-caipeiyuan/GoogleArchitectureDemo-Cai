@@ -7,7 +7,7 @@ import androidx.databinding.Bindable;
 import google.architecture.common.BR;
 
 /**
- * Created by Danxx on 2017/12/2.
+ * Created by clark on 2022/02/28.
  * 原始版支持双向绑定的数据
  */
 

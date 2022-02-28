@@ -1,7 +1,7 @@
 package google.architecture.coremodel.datamodel.http;
 
 /**
- * Created by dxx on 2017/11/8.
+ * Created by clark on 2022/02/28.
  */
 
 public class ApiConstants {

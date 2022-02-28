@@ -19,7 +19,12 @@ import google.architecture.common.base.BaseFragment;
 import google.architecture.common.util.BindingUtils;
 import google.architecture.common.widget.NoScrollViewPager;
 import google.architecture.specific.databinding.ActivityMainBinding;
-
+/**
+ * @ClassName: ActivityMain
+ * @Description: 测试主页面
+ * @Author: clark
+ * @Date: 2022/2/28 5:27 下午
+ */
 public class ActivityMain extends BaseActivity {
 
     ActivityMainBinding mainBinding;
